@@ -1,0 +1,16 @@
+version: '4.28'
+
+services:
+
+  app:
+    build: .
+    container_name: dockertest
+    command: npm run dev
+    image: vite-react-express:latest
+    ports:
+      - 3000:3000
+    
+    volumes:
+      - .:/app
+
+
